@@ -10,14 +10,18 @@ app.get('/name', (req, res) => {
 // Route for /hobby
 app.get('/hobby', (req, res) => {
   const hobby = {
-    favoriteHobby: 'playing playstation'  
+    favoriteHobby: [
+    'playing playstation',
+    'watching movies',
+    'watching football games united fan'
+    ]
   };
   res.status(200).json(hobby);
 });
 
 // Route for /dream
 app.get('/dream', (req, res) => {
-  res.status(200).send('My dream is to become a software engineer who helps build innovative technology.');
+  res.status(200).send('My dream is to become a software engineer who builds innovative technology.');
 });
 
 // Start the server
